@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'poppins';
-    src: url(../fonts/Poppins-ExtraLight.ttf);
+    src: url(../fonts/Roboto-Light.ttf);
  }
 
  @font-face {
     font-family: 'poppinsBold';
-    src: url(../fonts/Poppins-Medium.ttf);
+    src: url(../fonts/Roboto-Medium.ttf);
  }
 
  @font-face {
@@ -30,7 +30,7 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 2;
-    background: #006c1d;
+    background: #0e5522;
 }
 
 img {
@@ -38,7 +38,7 @@ img {
 }
 .contenedor {
     width: 95%;
-    max-width: 120rem;
+    max-width: 122rem;
     margin: 0 auto;
 }
 h1 {
@@ -112,7 +112,6 @@ a {
 }
 .site-header {
     background-color: rgb(0, 0, 0);
-    padding: 1rem 0 3rem 0;
 }
 .site-header.inicio {
     background-image: linear-gradient(
@@ -174,8 +173,8 @@ a {
     color: #006c1d;
     -webkit-text-stroke: 0.4px rgb(255, 255, 255);
     font-size: 2rem;
-
 }
+
 .mobile-menu img {
     width: 5rem;
 }
@@ -202,6 +201,9 @@ a {
     }
 }
 .icono {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     padding: 5px;
     background-image: linear-gradient(
@@ -211,6 +213,9 @@ a {
 }
 
 .icono2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     padding: 5px;
     background-image: linear-gradient(
@@ -220,6 +225,9 @@ a {
 }
 
 .icono3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     padding: 5px;
     background-image: linear-gradient(
@@ -250,8 +258,8 @@ a {
 }
 .anuncio {
     border: 1px solid var(--border-color-light);
-    background-color: hsl(135, 85%, 51%);
-    margin-bottom: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -319,12 +327,11 @@ a {
     }
 }
 .entrada-blog {
-    margin-bottom: 2rem;
+    padding: 10px;
 }
 @media (min-width: 768px) {
     .entrada-blog {
         display: flex;
-        justify-content: space-between;
     }
 }
 .entrada-blog:last-of-type{
@@ -336,10 +343,11 @@ a {
     }
     .entrada-blog .texto-entrada {
         flex-basis: calc(60% - 3rem);
+        height: 153px;
+        overflow: hidden;
     }
 }
 .texto-entrada a {
-    color: rgb(30, 212, 112);
     text-decoration: none;
 }
 .texto-entrada h4 {
@@ -349,7 +357,7 @@ a {
 .texto-entrada h4::after {
     content: '';
     display: block;
-    width: 15rem;
+    width: 40rem;
     height: .5rem;
     background: #00ad26;
 }
@@ -411,4 +419,152 @@ copyright {
 
 .justificar{
     text-align: justify;
+}
+
+.contenedor-anuncios{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background: #0b2719;
+}
+
+.atractivos{
+width: 400px;
+flex-direction: column;
+display: flex;
+align-items: center;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+.atractivos img{
+    width: 300px;
+    height: 300px;
+    background: #0b2719;
+    border-radius: 50%;
+  }
+.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.atractivos label{
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+.title{
+    font-size: 25px;
+}
+.text-container{
+    width: 350px;
+    white-space: nowrap;
+    background: #00ad26;
+    text-overflow: ellipsis;
+}
+
+.ferias{
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.eventos{
+    width: 600px;
+    line-height: 20px;
+}
+
+.titulo-entrada{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.extra {
+    display: none;
+}
+
+.original{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenedor-informacion{
+    width: 100%;
+    padding: 20px;
+}
+
+.menos{
+    color: blue;
+    cursor: pointer;
+}
+
+.pad {
+    padding: 12px;
+}
+
+.title-animal {
+    font-family: 'animal';
+}
+
+.main-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.main-links li {
+    padding:  0 5px 0 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: black;
+}
+
+.dropdown-li {
+    position: relative;
+}
+
+.dropdown-li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transition: 1s;
+}
+
+.dropdown {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    display: none;
+    background: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.dropdown input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background: #f8f8f8;
+    list-style: none;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+
+}
+
+.ir {
+text-decoration: none;
+color: white;
+  background: green;
+  padding: 6px;
 }

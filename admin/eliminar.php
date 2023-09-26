@@ -22,9 +22,9 @@ if (isset($_GET)) {
             }
         }
         if ($_GET['accion'] == 'avi') {
-            $query = mysqli_query($conexion, "DELETE FROM imagenes WHERE id = $id");
+            $query = mysqli_query($conexion, "DELETE FROM parques WHERE id = $id");
             if ($query) {
-                header('Location: avisos.php');
+                header('Location: parques.php');
             }
         }
     }

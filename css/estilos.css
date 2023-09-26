@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'poppins';
-    src: url(../fonts/Poppins-Bold.ttf);
+    src: url(../fonts/Roboto-Light.ttf);
+ }
+
+ @font-face {
+    font-family: 'poppinsBold';
+    src: url(../fonts/Roboto-Medium.ttf);
  }
 
  @font-face {
@@ -28,7 +33,7 @@ body{
     background-image: linear-gradient(
         rgba(39, 39, 39, 0.769),rgba(29, 29, 29, 0.798)
     ), url(../img/fondo.jpg);
-    background-size: contain;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,8 +64,6 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-
-    background: #fafafa;
     opacity: 0.9;
 }
 
@@ -73,7 +76,22 @@ body{
     align-items: center;
     justify-content: center;
 
-    background-image: url('../fondo.jpg');
+    background-image: url('../img/login.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.cantact_login{
+    width: 38%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../img/logearse.jpg');
     background-size: cover;
     background-position: center center;
 
@@ -107,7 +125,7 @@ body{
     align-items: center;
 
     font-size: 16px;
-    font-weight: 600;
+    /* font-weight: 600; */
     margin-bottom: 10px;
 }
 
@@ -136,7 +154,7 @@ form.form_contact{
 form.form_contact h2{
     justify-content: center;
 	font-size: 30px;
-	font-weight: 600;
+	/* font-weight: 600; */
     color: #ddc23f; 
 	margin-bottom: 30px;
 }
@@ -147,7 +165,7 @@ form.form_contact .user_info{
 }
 
 form.form_contact label{
-    font-weight: 600;
+    /* font-weight: 600; */
     color: white;
 }
 
@@ -161,7 +179,7 @@ form.form_contact textarea{
     border-bottom: 2px solid #19a319;
     color: #000000; 
 	font-size: 14px;
-	font-weight: 400;
+	/* font-weight: 400; */
 }
 
 form.form_contact input[type="submit"]{
@@ -173,7 +191,7 @@ form.form_contact input[type="submit"]{
     align-self: flex-end;
     color: #0f6725;
 	font-size: 16px;
-    font-weight: bold;
+    /* font-weight: bold; */
 	cursor: pointer;
 }
 
@@ -207,7 +225,7 @@ form.form_contact input[type="submit"]:hover{
     text-align: center;
     font-family: 'Ubuntu';
 	font-size: 20px;
-	font-weight: 400;
+	/* font-weight: 400; */
 }
 
 .mensaje_modal h3:after{
@@ -302,4 +320,8 @@ footer nav {
 footer a{
     text-decoration: none;
     color: white;
+}
+
+.login {
+    display: none;
 }
