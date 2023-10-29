@@ -29,7 +29,7 @@ function registrar(){
     $paterno=$_POST['paterno'];
     $materno=$_POST['materno'];
     $correo=$_POST['correo'];
-    $password=$_POST['password'];
+    $password=md5($_POST['password']);
     session_start();
     
     require_once "../conexion.php";
@@ -63,10 +63,8 @@ function borrar(){
 }
 
 function password(){
-
-    echo 'entro acaaaaa';
     $correo=$_POST['correo'];
-    $password=$_POST['password'];
+    $password=md5($_POST['password']);
     session_start();
 
     require_once "../conexion.php";
@@ -77,16 +75,16 @@ function password(){
     if($filas){
         while ($data = mysqli_fetch_assoc($resultado)) {
             $_SESSION['nombre']=$data['nombre'];
-            $_SESSION['nombre']=$data['paterno'];
+            $_SESSION['apellido']=$data['paterno'];
+            $_SESSION['correo']=$data['correo'];
+            
         }
         header('Location: ../../index.php');
     }else{
         echo 'esta fallando';
         header('Location: ../../registro.php');
-        session_destroy();
-        
+        session_destroy();   
     }
-
 }
 
 

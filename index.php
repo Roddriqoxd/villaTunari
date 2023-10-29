@@ -63,7 +63,7 @@ require_once "config/conexion.php"; ?>
                 </nav>
 
             </div>
-            <label>VILLA TUNARI</label>
+            <label class="repon">VILLA TUNARI</label>
 
         </div>
     </header>
@@ -173,7 +173,7 @@ require_once "config/conexion.php"; ?>
                     $query = mysqli_query($conexion, "SELECT * FROM ferias LIMIT 4");
                     while ($data = mysqli_fetch_assoc($query)) { ?>
 
-        <section class="eventos" style="height: 170px; overflow: hidden;">
+        <section class="eventos" style="">
             <article class="entrada-blog">
                 <div class="imagen" style="padding-right: 12px; width: 230px; height: 150px; overflow: hidden;">
                     <img style="width: 90%;" src="assets/img/<?php echo $data['img1']; ?>" alt="">
@@ -212,7 +212,7 @@ require_once "config/conexion.php"; ?>
             width="90%" height="450px" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         <a style="margin-bottom: 10px;" href="https://goo.gl/maps/F7uukCQFsCK5qqoG7"
-            class="boton boton-amarillo">Llevame ahi</a>
+            class="boton boton-amarillo btn-v">Llevame ahi</a>
     </section>
 
     <footer class="site-footer seccion">

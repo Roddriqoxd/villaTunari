@@ -1,5 +1,6 @@
 <?php require_once "config/conexion.php"; 
-
+session_start();
+error_reporting(0);
 if (isset($_GET)) {
     if (!empty($_GET['accion']) && !empty($_GET['id'])) {
         require_once "config/conexion.php";
@@ -45,7 +46,26 @@ if (isset($_GET)) {
                     <a href="nosotros.php">inicio</a>
                     <a href="anuncios.php">Parques</a>
                     <a href="blog.php">Ferias</a>
-                    <a href="contacto.php">Registro</a>
+                    <?php 
+                    if($_SESSION['nombre'] == null || $varsesion= ''){
+                        ?>
+                    <a href="registro.php">Registrate</a>
+                    <?php
+                    }else{
+                        ?>
+                    <a class="main-links">
+                        <li class="dropdown-li">
+                            <?php echo $_SESSION['nombre']?>
+                            <ul class="dropdown">
+                                <form action="config/login/cerrar.php" method="post">
+                                    <input type="submit" value="salir">
+                                </form>
+                            </ul>
+                        </li>
+                    </a>
+                    <?php
+                    }
+                    ?>
                 </nav>
             </div>
         </div>

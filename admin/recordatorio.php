@@ -1,9 +1,12 @@
 <?php
 
 if (isset($_GET)) {
-  if (!empty($_GET['id'])) {
+  if (!empty($_GET['nombre'])) {
       require_once "../config/conexion.php";
-      $id_feria = $_GET['id'];
+      $feria = $_GET['nombre'];
+      $dias = $_GET['dias'];
+      $usuario = $_GET['usuario'];
+
   }
 }
 //Import PHPMailer classes into the global namespace
@@ -171,7 +174,7 @@ try {
         <tbody>
           <tr>
             <td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
-              <h1>GRACIAS POR SUSCRIBIRTE A NUESTRO RECORDATORIO</h1>
+              <h1>GRACIAS POR SUSCRIBIRTE A LOS EVENTOS DE VILLA TUNARI/h1>
             </td>
           </tr>
         </tbody>
@@ -198,7 +201,11 @@ try {
               <td style="padding:0px;margin:0px;border-spacing:0;"><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a5ee1b9d-aacf-476c-ad72-fa1f2d816f12" data-mc-module-version="2019-10-22">
         <tbody>
           <tr>
-            <td style="padding:30px 0px 0px 0px; line-height:50px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><h1 style="text-align: center; font-family: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 60px; color: #1c2c7b"></span><span style="color: #1c2c7b; font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 60px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(243, 246, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline"> VILLA TUNARI</span><br><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 60px; color: #1c2c7b"><strong>¡Te Espera!</strong></span></h1><div></div></div></td>
+            <td style="padding:30px 0px 0px 0px; line-height:50px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><h1 style="text-align: center; font-family: inherit"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 50px; color: #1c2c7b"></span><span style="color: #1c2c7b; font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 60px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(243, 246, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline; line-height: normal;">
+             Hola '.$usuario.' <br> VILLA TUNARI
+             </span><br><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 60px; color: #1c2c7b"><strong>
+             ¡Te Espera!
+             </strong></span></h1><div></div></div></td>
           </tr>
         </tbody>
       </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a5ee1b9d-aacf-476c-ad72-fa1f2d816f12.2" data-mc-module-version="2019-10-22">
@@ -227,7 +234,7 @@ try {
         <tbody>
           <tr>
             <td style="padding:30px 30px 30px 30px; line-height:30px; text-align:inherit; background-color:#75c6fb;" height="100%" valign="top" bgcolor="#75c6fb" role="module-content"><div><div style="font-family: inherit; text-align: center"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif; font-size: 22px; color: #1c2c7b">
-              la '.$id_feria.' esta apunto de comenzar. NO TE LO PIERDAS
+              Quedan '.$dias.' para que comience la "'.$feria.'". NO TE LO PIERDAS
             </span></div>
           </tr>
         </tbody>
@@ -239,7 +246,7 @@ try {
                   <tbody>
                     <tr>
                     <td align="center" bgcolor="#D53B3E" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;">
-                      <a href="https://wa.link/9crg59" style="background-color:#D53B3E; border:0px solid #333333; border-color:#333333; border-radius:0px; border-width:0px; display:inline-block; font-size:16px; font-weight:700; letter-spacing:2px; line-height:normal; padding:15px 50px 15px 50px; text-align:center; text-decoration:none; border-style:solid; font-family:lucida sans unicode,lucida grande,sans-serif; color:#ffffff;" target="_blank">Ver feria</a>
+                      <a href="http://localhost:8080/villatunari/blog.php" style="background-color:#D53B3E; border:0px solid #333333; border-color:#333333; border-radius:0px; border-width:0px; display:inline-block; font-size:16px; font-weight:700; letter-spacing:2px; line-height:normal; padding:15px 50px 15px 50px; text-align:center; text-decoration:none; border-style:solid; font-family:lucida sans unicode,lucida grande,sans-serif; color:#ffffff;" target="_blank">Ver feria</a>
                     </td>
                     </tr>
                   </tbody>
@@ -265,3 +272,6 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 ?>
+<script>
+window.location="http://localhost:8080/villatunari/admin/suscripciones.php";
+</script>

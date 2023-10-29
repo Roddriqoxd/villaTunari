@@ -3,19 +3,17 @@ session_start();
 error_reporting(0);
 require_once "config/conexion.php"; 
 
-if (isset($_GET)) {
-    if (!empty($_GET['accion']) && !empty($_GET['id'])) {
-        require_once "config/conexion.php";
         $id = $_GET['id'];
+        $feria = $_GET['nombre'];
         $nombre = $_SESSION['nombre'].' '.$_SESSION['apellido'];
         $correo = $_SESSION['correo'];
-        $query2 = mysqli_query($conexion, "SELECT * FROM suscripciones WHERE correo = '$correo'");
+        $query2 = mysqli_query($conexion, "SELECT * FROM suscripciones WHERE correo = '$correo' AND id_feria = '$id'");
         $result = mysqli_num_rows($query2);
-        if ($_GET['accion'] == 'suscribirse') {
-            $query = mysqli_query($conexion, "INSERT INTO suscripciones (id_feria, correo, nombre) VALUES ('$id', '$correo', '$nombre')");
+        if ($result === 0) {
+            $query = mysqli_query($conexion, "INSERT INTO suscripciones (id_feria, correo, nombre, feria) VALUES ('$id', '$correo', '$nombre', '$feria')");
+            } else {
+                $res = 'ya existe esta suscripcion';
             }
-        }
-    }
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +34,6 @@ if (isset($_GET)) {
 </head>
 
 <body>
-
     <header class="site-header">
         <div class="contenedor contenido-header">
             <div class="barra">
@@ -58,24 +55,22 @@ if (isset($_GET)) {
         </div>
     </header>
 
-    <div>
-        <table class="table table-hover table-bordered" style="width: 100%;">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Imagen</th>
+    <div style="display: flex; width: 100%; justify-content: center; padding-top: 20px;">
+        <table class="table" style="width: 90%; background-color: #ffff; border: 1px solid;">
+            <thead style="border: 1px solid black;" >
+                <tr style="border: 1px solid; background-color: #737373;">
                     <th>Feria</th>
+                    <th>Correo</th>
                     <th>Accion</th>
                 </tr>
             </thead>
             <tbody>
             <?php
-            $result = mysqli_num_rows($query2);
-            if ($result > 0) {
-            while ($data = mysqli_fetch_assoc($query2)) { ?>
+                    $query = mysqli_query($conexion, "SELECT * FROM suscripciones WHERE correo = '$correo'");
+                    while ($data = mysqli_fetch_assoc($query)) { ?>
                 <tr>
-                    <!-- <td><img class="img-thumbnail" src="../assets/img/<?php echo $fer['img1']; ?>" width="50"></td> -->
-                    <td><?php echo $data['id_feria']; ?></td>
-                    <td><?php echo $data['nombre']; ?></td>
+                    <td><?php echo $data['feria']; ?></td>
+                    <td><?php echo $data['correo']; ?></td>
                     <td>
                         <form method="post" action="eliminar.php?accion=avi&id=<?php echo $data['id']; ?>"
                             class="d-inline eliminar">
@@ -83,8 +78,7 @@ if (isset($_GET)) {
                         </form>
                     </td>
                 </tr>
-                <?php  }
-                } ?>
+                <?php  } ?>
             </tbody>
         </table>
     </div>

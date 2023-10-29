@@ -37,6 +37,14 @@
         </div>
     </header>
 
+<style>
+    @media screen and (max-width: 500px) {
+    .form_wrap{
+        width: 400px;
+        }
+    }
+</style>
+
     <section class="form_wrap">
 
             <!-- primera parte -->

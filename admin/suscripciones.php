@@ -41,11 +41,16 @@ include("includes/header.php");
                     <tr>
                         <td><?php echo $data['nombre']; ?></td>
                         <td><?php echo $data['correo']; ?></td>
-                        <?php while ($datax = mysqli_fetch_assoc($query2)) {  ?>
-                        <td><?php echo $datax['nombre']; ?></td>
+                        <?php while ($datax = mysqli_fetch_assoc($query2)) {  
+                         $in = new DateTime(date("Y-m-d"));
+                         $fn = new DateTime($datax['inicio']);  
+                         $interval = $in->diff($fn);
+                            
+                            ?>
+                        <td><?php echo $interval->format('%R%a días')?></td>
                         
                         <td>
-                            <form method="post" action="recordatorio.php?id=<?php echo $datax['nombre']; ?>"
+                            <form method="post" action="recordatorio.php?nombre=<?php echo $datax['nombre']?>&dias=<?php echo $interval->format('%R%a días')?>&usuario=<?php echo $data['nombre']?>"
                                 class="d-inline">
                                 <button class="btn btn-success" type="submit">Enviar</button>
                             </form>

@@ -67,7 +67,7 @@ require_once "config/conexion.php"; ?>
     </header>
     <!--EMPIEZO--->
 
-    <div>
+    <div class="rueda">
         <h2 class="title-animal">FERIAS DEL MUNICIPIO DE VILLA TUNARI</h2>
         <div class="content-all">
             <div class="content-carrousel">
@@ -83,52 +83,54 @@ require_once "config/conexion.php"; ?>
                 <figure><img src="img/feria 13.jfif"></figure>
             </div>
         </div>
+        <br></br><br></br><br></br>
     </div>
     <!--FIN--->
-    <br></br><br></br><br></br><br></br>
+
 
     <h2 class="centrar-texto fw-300 title-animal"> Eventos y Ferias Turísticas</h2><br>
     <div class=" contenedor seccion">
 
-    <?php
+        <?php
                     $query = mysqli_query($conexion, "SELECT * FROM ferias");
                     while ($data = mysqli_fetch_assoc($query)) { ?>
-                    <tr>
+        <tr>
 
-        <section class="">
-            <article class="entrada-blog">
-                <div class="imagen" style="width: 400px;height: 300px; overflow: hidden">
-                    <img style="width: 90%;" src="assets/img/<?php echo $data['img1']; ?>" alt="">
-                </div>
-                <div class="texto-entrada" style="height: 300px;">
-                    <a href="entrada.php?accion=mostrar&id=<?php echo $data['id']; ?>">
-                        <h4 class="titulo-feria"><?php echo $data['nombre']; ?></h4>
-                    </a>
-                    <p>Fecha:&nbsp; <span><?php echo $data['inicio']  ?></span>
-                    <?php 
+            <section>
+                <article class="entrada-blog case">
+                    <div class="imagen" style="width: 400px;height: 300px; overflow: hidden">
+                        <img style="width: 90%;" src="assets/img/<?php echo $data['img1']; ?>" alt="">
+                    </div>
+                    <div class="texto-entrada" style="height: 300px;">
+                        <a href="entrada.php?accion=mostrar&id=<?php echo $data['id']; ?>">
+                            <h4 class="titulo-feria"><?php echo $data['nombre']; ?></h4>
+                        </a>
+                        <p>Fecha:&nbsp; <span><?php echo $data['inicio']  ?></span>
+                            <?php 
                     if($data['fin'] ==! null){
                         ?>
-                     &nbsp;hasta el:&nbsp; <span><?php echo $data['fin'];?></span></p>
-                    <?php
+                            &nbsp;hasta el:&nbsp; <span><?php echo $data['fin'];?></span></p>
+                        <?php
                     }else{
                         ?>
-                    </p>
-                    <?php
+                        </p>
+                        <?php
                     }
                     ?>
-                    
-                   
-                    <p style="width: 690px; height: 30px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
-                    <?php echo $data['descripcion']; ?>
-                    </p>
-                    <div class="ver-todas" style="justify-content: space-between; color: while; text-decoration: none;">
-                    <a href="entrada.php?accion=mostrar&id=<?php echo $data['id']; ?>" class="boton boton-verde">Ver mas</a>
-                    <a href="suscripciones.php?accion=suscribirse&id=<?php echo $data['id']; ?>" class="boton boton-verde">Suscribirse</a>
-                </div>
-                </div>
-            </article>
-        </section>
-                    <?php } ?>
+                        <p class="pe" style="">
+                            <?php echo $data['descripcion']; ?>
+                        </p>
+                        <div class="ver-todas"
+                            style="justify-content: space-between; color: while; text-decoration: none;">
+                            <a href="entrada.php?accion=mostrar&id=<?php echo $data['id']; ?>"
+                                class="boton boton-verde">Ver mas</a>
+                            <a href="suscripciones.php?nombre=<?php echo $data['nombre']; ?>&id=<?php echo $data['id']; ?>"
+                                class="boton boton-verde">Suscribirse</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <?php } ?>
 
     </div>
 
@@ -172,11 +174,8 @@ require_once "config/conexion.php"; ?>
                             ?>
 
         </div>
-
     </div>
-
     </div>
-
     </div>
 
     <footer class="site-footer seccion">
@@ -190,6 +189,12 @@ require_once "config/conexion.php"; ?>
             <p class="copyright">TGobierno Autonomo Municipal de Villa Tunari &copy;</p>
         </div>
     </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

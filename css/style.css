@@ -176,7 +176,7 @@ a {
 }
 
 .mobile-menu img {
-    width: 5rem;
+    width: 4rem;
 }
 @media (min-width: 768px) {
     .mobile-menu {
@@ -474,6 +474,8 @@ padding-bottom: 30px;
 .eventos{
     width: 600px;
     line-height: 20px;
+    height: 170px; 
+    overflow: hidden;
 }
 
 .titulo-entrada{
@@ -568,3 +570,155 @@ color: white;
   background: green;
   padding: 6px;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+.grid img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #06D85F;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .button:hover {
+    background: #06D85F;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  .anuncioss {
+    display: flex; justify-content: space-evenly;
+  }
+  .pe{
+    width: 690px; height: 30px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .contenido-header label{
+      font-size: 50px;
+    }
+
+    .contenedor-anuncios{
+        display: contents;
+    }
+
+    .eventos{
+        height: auto;
+    }
+    .btn-v{
+        flex: auto;
+    }
+    .entrada-blog{
+        display: flex;
+    }
+    body{
+        line-height: 1.5;
+    }
+    .iconos-nosotros {
+        padding: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+    }
+    .anuncioss{
+        display: block;
+    }
+    .v-line{
+        display: none;
+    }
+    .case{
+        display: contents;
+    }
+    .pe{
+        width: auto;
+    }
+    .ver-todas {
+        display: contents;
+    }
+    .rueda{
+        display: none;
+    }
+
+  }
+  
