@@ -66,7 +66,7 @@ require_once "config/conexion.php"; ?>
         </div>
     </header>
     <!--EMPIEZO--->
-
+<!-- 
     <div class="rueda">
         <h2 class="title-animal">FERIAS DEL MUNICIPIO DE VILLA TUNARI</h2>
         <div class="content-all">
@@ -84,7 +84,7 @@ require_once "config/conexion.php"; ?>
             </div>
         </div>
         <br></br><br></br><br></br>
-    </div>
+    </div> -->
     <!--FIN--->
 
 

@@ -1,7 +1,7 @@
 <?php
     $host = "localhost";
     $user = "root";
-    $clave = "";
+    $clave = "1234";
     $bd = "villatunari";
     $conexion = mysqli_connect($host,$user,$clave,$bd);
     if (mysqli_connect_errno()){
