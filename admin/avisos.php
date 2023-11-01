@@ -13,14 +13,14 @@ if (isset($_POST)) {
         $foto1 = $img1['name'];
         $tmpname1 = $img1['tmp_name'];
         $fecha = date("YmdHis");
-        $name1 = $foto1;
+        $name1 = $fecha . "1.jpg";
         $destino1 = "../assets/img/" . $name1;
 
         $img2 = $_FILES['img2'];
         $foto2 = $img2['name'];
         $tmpname2 = $img2['tmp_name'];
         $fecha2 = date("YmdHis");
-        $name2 = $foto2;
+        $name2 = $fecha2 . "2.jpg";;
         $destino2 = "../assets/img/" . $name2;
 
         $query = mysqli_query($conexion, "INSERT INTO ferias (nombre, descripcion, inicio, fin, ubicacion, img1, img2) 
@@ -65,7 +65,7 @@ include("includes/header.php"); ?>
                         <td><?php echo $data['inicio']; ?></td>
                         <td><?php echo $data['fin']; ?></td>
                         <td>
-                            <form method="post" action="eliminar.php?accion=avi&id=<?php echo $data['id']; ?>"
+                            <form method="post" action="eliminar.php?accion=avis&id=<?php echo $data['id']; ?>"
                                 class="d-inline eliminar">
                                 <button class="btn btn-danger" type="submit">Eliminar</button>
                             </form>

@@ -20,42 +20,42 @@ if (isset($_POST)) {
         $foto1 = $img1['name'];
         $tmpname1 = $img1['tmp_name'];
         $fecha = date("YmdHis");
-        $name1 = $foto1;
+        $name1 = $fecha . "1.jpg";;
         $destino1 = "../assets/img/" . $name1;
 
         $img2 = $_FILES['img2'];
         $foto2 = $img2['name'];
         $tmpname2 = $img2['tmp_name'];
         $fecha2 = date("YmdHis");
-        $name2 = $foto2;
+        $name2 = $fecha2 . "2.jpg";;
         $destino2 = "../assets/img/" . $name2;
 
         $img3 = $_FILES['img3'];
         $foto3 = $img3['name'];
         $tmpname3 = $img3['tmp_name'];
         $fecha3 = date("YmdHis");
-        $name3 = $foto3;
+        $name3 = $fecha3 . "3.jpg";
         $destino3 = "../assets/img/" . $name3;
 
         $img4 = $_FILES['img4'];
         $foto4 = $img4['name'];
         $tmpname4 = $img4['tmp_name'];
         $fecha4 = date("YmdHis");
-        $name4 = $foto4;
+        $name4 = $fecha4 . "4.jpg";
         $destino4 = "../assets/img/" . $name4;
 
         $img5 = $_FILES['img5'];
         $foto5 = $img5['name'];
         $tmpname5 = $img5['tmp_name'];
         $fecha5 = date("YmdHis");
-        $name5 = $foto5;
+        $name5 = $fecha5 . "5.jpg";
         $destino5 = "../assets/img/" . $name5;
 
         $img6 = $_FILES['img6'];
         $foto6 = $img6['name'];
         $tmpname6 = $img6['tmp_name'];
         $fecha6 = date("YmdHis");
-        $name6 = $foto6;
+        $name6 = $fecha6 . "6.jpg";
         $destino6 = "../assets/img/" . $name6;
 
         $query = mysqli_query($conexion, 

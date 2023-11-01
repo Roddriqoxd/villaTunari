@@ -27,6 +27,12 @@ if (isset($_GET)) {
                 header('Location: parques.php');
             }
         }
+        if ($_GET['accion'] == 'avis') {
+            $query = mysqli_query($conexion, "DELETE FROM ferias WHERE id = $id");
+            if ($query) {
+                header('Location: parques.php');
+            }
+        }
     }
 }
 ?>
