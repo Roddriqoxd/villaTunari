@@ -65,28 +65,6 @@ require_once "config/conexion.php"; ?>
             </div>
         </div>
     </header>
-    <!--EMPIEZO--->
-<!-- 
-    <div class="rueda">
-        <h2 class="title-animal">FERIAS DEL MUNICIPIO DE VILLA TUNARI</h2>
-        <div class="content-all">
-            <div class="content-carrousel">
-                <figure><img src="img/feria 11.jfif"></figure>
-                <figure><img src="img/feria 12.jfif"></figure>
-                <figure><img src="img/feria 13.jfif"></figure>
-                <figure><img src="img/feria 14.jfif"></figure>
-                <figure><img src="img/feria 11.jfif"></figure>
-                <figure><img src="img/feria 12.jfif"></figure>
-                <figure><img src="img/feria 13.jfif"></figure>
-                <figure><img src="img/feria 11.jfif"></figure>
-                <figure><img src="img/feria 12.jfif"></figure>
-                <figure><img src="img/feria 13.jfif"></figure>
-            </div>
-        </div>
-        <br></br><br></br><br></br>
-    </div> -->
-    <!--FIN--->
-
 
     <h2 class="centrar-texto fw-300 title-animal"> Eventos y Ferias Turísticas</h2><br>
     <div class=" contenedor seccion">
@@ -124,8 +102,19 @@ require_once "config/conexion.php"; ?>
                             style="justify-content: space-between; color: while; text-decoration: none;">
                             <a href="entrada.php?accion=mostrar&id=<?php echo $data['id']; ?>"
                                 class="boton boton-verde">Ver mas</a>
+
+                                <?php 
+                    if($_SESSION['nombre'] == null || $varsesion= ''){
+                        ?>
+                    <a href="registro.php" class="boton boton-verde">Registrate y suscribete</a>
+                    <?php
+                    }else{
+                        ?>
                             <a href="suscripciones.php?nombre=<?php echo $data['nombre']; ?>&id=<?php echo $data['id']; ?>"
                                 class="boton boton-verde">Suscribirse</a>
+                    <?php
+                    }
+                    ?>
                         </div>
                     </div>
                 </article>

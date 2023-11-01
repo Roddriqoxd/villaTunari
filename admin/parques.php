@@ -142,6 +142,7 @@ include("includes/header.php"); ?>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="descripcion">Ubicacion HTML</label>
+                                <a href="https://www.google.com/maps" target="_blank">https://www.google.com/maps</a>
                                 <textarea id="descripcion" class="form-control" name="ubicacion"
                                     placeholder="<iframe src=https://www.google.com/maps/embed?pb..." rows="2"
                                     required></textarea>
@@ -159,31 +160,73 @@ include("includes/header.php"); ?>
 
                             <div class="form-group row">
                                 <label class="col-3" for="descripcion">Lunes</label>
-                                <input id="nombre" class="form-control col-9" type="text" name="lunes" required>
+                                <select class="form-select" name="lunes" aria-label="Default select example">
+                                    <option selected value="Todo el dia">Todo el dia</option>
+                                    <option value="Solo en las mañanas">Solo en las mañanas</option>
+                                    <option value="Solo en las tardes">Solo en las tardes</option>
+                                    <option value="Horario continuo">Horario continuo</option>
+                                    <option value="cerrado">Cerrado</option>
+                                </select>
                             </div>
                             <div class="form-group row">
                                 <label class="col-3" for="descripcion">Martes</label>
-                                <input id="nombre" class="form-control col-9" type="text" name="martes" required>
+                                <select class="form-select" name="martes" aria-label="Default select example">
+                                    <option selected value="Todo el dia">Todo el dia</option>
+                                    <option value="Solo en las mañanas">Solo en las mañanas</option>
+                                    <option value="Solo en las tardes">Solo en las tardes</option>
+                                    <option value="Horario continuo">Horario continuo</option>
+                                    <option value="cerrado">Cerrado</option>
+                                </select>
                             </div>
                             <div class="form-group row">
                                 <label class="col-3" for="descripcion">Miercoles</label>
-                                <input id="nombre" class="form-control col-9" type="text" name="miercoles" required>
+                                <select class="form-select" name="miercoles" aria-label="Default select example">
+                                    <option selected value="Todo el dia">Todo el dia</option>
+                                    <option value="Solo en las mañanas">Solo en las mañanas</option>
+                                    <option value="Solo en las tardes">Solo en las tardes</option>
+                                    <option value="Horario continuo">Horario continuo</option>
+                                    <option value="cerrado">Cerrado</option>
+                                </select>
                             </div>
                             <div class="form-group row">
                                 <label class="col-3" for="descripcion">Jueves</label>
-                                <input id="nombre" class="form-control col-9" type="text" name="jueves" required>
+                                <select class="form-select" name="jueves" aria-label="Default select example">
+                                    <option selected value="Todo el dia">Todo el dia</option>
+                                    <option value="Solo en las mañanas">Solo en las mañanas</option>
+                                    <option value="Solo en las tardes">Solo en las tardes</option>
+                                    <option value="Horario continuo">Horario continuo</option>
+                                    <option value="cerrado">Cerrado</option>
+                                </select>
                             </div>
                             <div class="form-group row">
                                 <label class="col-3" for="descripcion">Viernes</label>
-                                <input id="nombre" class="form-control col-9" type="text" name="viernes" required>
+                                <select class="form-select" name="viernes" aria-label="Default select example">
+                                    <option selected value="Todo el dia">Todo el dia</option>
+                                    <option value="Solo en las mañanas">Solo en las mañanas</option>
+                                    <option value="Solo en las tardes">Solo en las tardes</option>
+                                    <option value="Horario continuo">Horario continuo</option>
+                                    <option value="cerrado">Cerrado</option>
+                                </select>
                             </div>
                             <div class="form-group row">
                                 <label class="col-3" for="descripcion">Sabado</label>
-                                <input id="nombre" class="form-control col-9" type="text" name="sabado" required>
+                                <select class="form-select" name="sabado" aria-label="Default select example">
+                                    <option selected value="Todo el dia">Todo el dia</option>
+                                    <option value="Solo en las mañanas">Solo en las mañanas</option>
+                                    <option value="Solo en las tardes">Solo en las tardes</option>
+                                    <option value="Horario continuo">Horario continuo</option>
+                                    <option value="cerrado">Cerrado</option>
+                                </select>
                             </div>
                             <div class="form-group row">
                                 <label class="col-3" for="descripcion">Domingo</label>
-                                <input id="nombre" class="form-control col-9" type="text" name="domingo" required>
+                                <select class="form-select" name="domingo" aria-label="Default select example">
+                                    <option selected value="Todo el dia">Todo el dia</option>
+                                    <option value="Solo en las mañanas">Solo en las mañanas</option>
+                                    <option value="Solo en las tardes">Solo en las tardes</option>
+                                    <option value="Horario continuo">Horario continuo</option>
+                                    <option value="cerrado">Cerrado</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-12">

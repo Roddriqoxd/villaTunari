@@ -7,10 +7,11 @@ require_once "config/conexion.php";
         $feria = $_GET['nombre'];
         $nombre = $_SESSION['nombre'].' '.$_SESSION['apellido'];
         $correo = $_SESSION['correo'];
+        $celular = $_SESSION['celular'];
         $query2 = mysqli_query($conexion, "SELECT * FROM suscripciones WHERE correo = '$correo' AND id_feria = '$id'");
         $result = mysqli_num_rows($query2);
         if ($result === 0) {
-            $query = mysqli_query($conexion, "INSERT INTO suscripciones (id_feria, correo, nombre, feria) VALUES ('$id', '$correo', '$nombre', '$feria')");
+            $query = mysqli_query($conexion, "INSERT INTO suscripciones (id_feria, correo, celular, nombre, feria) VALUES ('$id', '$correo', '$celular', '$nombre', '$feria')");
             } else {
                 $res = 'ya existe esta suscripcion';
             }
@@ -46,7 +47,7 @@ require_once "config/conexion.php";
                     </a>
                 </div>
                 <nav id="navegacion" class="navegacion">
-                    <a href="nosotros.php">inicio</a>
+                    <a href="index.php">inicio</a>
                     <a href="anuncios.php">Parques</a>
                     <a href="blog.php">Ferias</a>
                     <a href="contacto.php">Registro</a>
@@ -82,18 +83,6 @@ require_once "config/conexion.php";
             </tbody>
         </table>
     </div>
-    <!-- <footer class="site-footer seccion">
-        <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.php">Inicio</a>
-                <a href="anuncios.php">Parques</a>
-                <a href="blog.php">Ferias</a>
-                <a href="contacto.php">Registro</a>
-            </nav>
-            <p class="copyright">Todos los Derechos Reservados 2019 &copy;</p>
-        </div>
-    </footer> -->
-
 
 </body>
 

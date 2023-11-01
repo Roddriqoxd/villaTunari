@@ -37,19 +37,19 @@
         </div>
     </header>
 
-<style>
+    <style>
     @media screen and (max-width: 500px) {
-    .form_wrap{
-        width: 400px;
+        .form_wrap {
+            width: 400px;
         }
     }
-</style>
+    </style>
 
     <section class="form_wrap">
 
-            <!-- primera parte -->
+        <!-- primera parte -->
 
-    <form id="registro" action="config/login/login.php" method="post" class="form_contact">
+        <form id="registro" action="config/login/login.php" method="post" class="form_contact">
             <h2 class="title-animal">Login</h2>
             <div class="user_info">
 
@@ -79,7 +79,7 @@
 
         <!-- segunda parte  -->
 
-        <section id="login"  class="cantact_info">
+        <section id="login" class="cantact_info">
             <section class="info_title">
                 <span class="fa fa-user-circle"></span>
                 <br><br><br><br><br><br><br>
@@ -107,11 +107,21 @@
                         <input type="text" id="materno" name="materno" required>
                     </div>
                 </div>
-                <label for="email">Correo electronico</label>
-                <input type="text" id="correo" name="correo" required>
+
+                <div style="display: flex; width: 100%; justify-content: space-between;">
+                    <div style="display: flex; flex-direction: column; width: 48%">
+                        <label for="email">Correo electronico</label>
+                        <input type="text" id="correo" name="correo" required>
+                    </div>
+                    <div style="display: flex; flex-direction: column; width: 48%">
+                        <label for="email">Celular</label>
+                        <input type="text" id="celular" name="celular" required>
+                    </div>
+                </div>
+
 
                 <label for="password"> contraseña</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
 
                 <input type="hidden" name="tipo" value="registro">
 
@@ -119,7 +129,7 @@
             </div>
         </form>
 
-        
+
 
     </section>
 
@@ -128,7 +138,7 @@
     document.getElementById('login1').style.display = 'none';
     document.getElementById('registro').style.height = '573px';
     document.getElementById('registro1').style.height = '573px';
-    
+
 
     function visible() {
         document.getElementById('login').style.display = 'flex';

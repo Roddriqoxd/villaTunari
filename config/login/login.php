@@ -30,10 +30,11 @@ function registrar(){
     $materno=$_POST['materno'];
     $correo=$_POST['correo'];
     $password=md5($_POST['password']);
+    $celular=$_POST['celular'];
     session_start();
     
     require_once "../conexion.php";
-    $query= "INSERT INTO `registro`( `nombre`, `paterno`,`materno`,`correo`, `password`) VALUES ('$nombre','$paterno','$materno','$correo','$password')";
+    $query= "INSERT INTO `registro`( `nombre`, `paterno`,`materno`,`correo`, `password`,`celular`) VALUES ('$nombre','$paterno','$materno','$correo','$password','$celular')";
     $consultado=mysqli_query($conexion, $query);
 
     
@@ -41,6 +42,7 @@ function registrar(){
             $_SESSION['nombre']=$nombre;
             $_SESSION['apellido']=$paterno;
             $_SESSION['correo']=$correo;
+            $_SESSION['celular']=$celular;
             header('Location: ../../index.php');
             
         }else{
@@ -76,6 +78,7 @@ function password(){
         while ($data = mysqli_fetch_assoc($resultado)) {
             $_SESSION['nombre']=$data['nombre'];
             $_SESSION['apellido']=$data['paterno'];
+            $_SESSION['celular']=$data['celular'];
             $_SESSION['correo']=$data['correo'];
             
         }

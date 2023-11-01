@@ -25,7 +25,7 @@ include("includes/header.php");
                 <thead class="thead-dark">
                     <tr>
                         <th>Nombre</th>
-                        <th>Correo</th>
+                        <th>Celular</th>
                         <th>Feria</th>
                         <!-- <th>Clave</th> -->
                         <th></th>
@@ -40,7 +40,7 @@ include("includes/header.php");
                         ?>
                     <tr>
                         <td><?php echo $data['nombre']; ?></td>
-                        <td><?php echo $data['correo']; ?></td>
+                        <td><?php echo $data['celular']; ?></td>
                         <?php while ($datax = mysqli_fetch_assoc($query2)) {  
                          $in = new DateTime(date("Y-m-d"));
                          $fn = new DateTime($datax['inicio']);  
@@ -50,7 +50,7 @@ include("includes/header.php");
                         <td><?php echo $interval->format('%R%a días')?></td>
                         
                         <td>
-                            <form method="post" action="recordatorio.php?nombre=<?php echo $datax['nombre']?>&dias=<?php echo $interval->format('%R%a días')?>&usuario=<?php echo $data['nombre']?>"
+                            <form method="post" action="enviar.php?nombre=<?php echo $datax['nombre']?>&dias=<?php echo $interval->format('%R%a días')?>&usuario=<?php echo $data['nombre']?>&telefono=<?php echo $data['celular']?>"
                                 class="d-inline">
                                 <button class="btn btn-success" type="submit">Enviar</button>
                             </form>

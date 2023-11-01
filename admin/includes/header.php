@@ -79,6 +79,11 @@ if (empty($_SESSION['id'])) {
                     <i class="fas fa-bell" aria-hidden="true"></i>
                     <span>Suscripciones</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="reportes.php">
+                    <i class="fas fa-bell" aria-hidden="true"></i>
+                    <span>Ferias</span></a>
+            </li>
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->

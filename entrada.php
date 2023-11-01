@@ -43,7 +43,7 @@ if (isset($_GET)) {
                     </a>
                 </div>
                 <nav id="navegacion" class="navegacion">
-                    <a href="nosotros.php">inicio</a>
+                    <a href="index.php">inicio</a>
                     <a href="anuncios.php">Parques</a>
                     <a href="blog.php">Ferias</a>
                     <?php 
