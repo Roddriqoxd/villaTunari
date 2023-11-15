@@ -138,7 +138,7 @@ require_once "config/conexion.php"; ?>
             </div>
             <div class="icono">
                 <div>
-                    <img src="img/p 7.jpg" width="900px" height="300px" alt="50"  style="padding: 12px; border-radius: 20px;>
+                    <img src="img/p 7.jpg" width="900px" height="300px" alt="50"  style="padding: 12px; border-radius: 20px;">
                     <h3 class="animal">Turismo inolvidable</h3>
                     <p class="justificar" style="padding-right: 10px; padding-left: 10px;">Caminatas por senderos de
                         selva,
@@ -156,7 +156,7 @@ require_once "config/conexion.php"; ?>
             </div>
             <div class="icono">
                 <div>
-                    <img src="img/p 5.jfif" width="900px" height="300px" alt="50"  style="padding: 12px; border-radius: 20px;>
+                    <img src="img/p 5.jfif" width="900px" height="300px" alt="50"  style="padding: 12px; border-radius: 20px;">
                     <h3 class="animal">Atactivos turisticos</h3>
                     <p class="justificar" style="padding-right: 10px; padding-left: 10px;">“La Jungla” es uno de los
                         parques
