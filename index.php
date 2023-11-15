@@ -116,7 +116,7 @@ require_once "config/conexion.php"; ?>
         <div class="iconos-nosotros">
             <div class="icono">
                 <div>
-                    <img src="img/p 6.jfif" width="900px" height="300px" alt="50">
+                    <img src="img/p 6.jfif" width="900px" height="300px" alt="50" style="padding: 12px; border-radius: 20px;">
                     <h3 class="animal">Municipio de Villa Tunari</h3>
                     <p class="justificar" style="padding-right: 10px; padding-left: 10px;">Es la Tercera Sección
                         Municipal
@@ -136,9 +136,9 @@ require_once "config/conexion.php"; ?>
                 </div>
 
             </div>
-            <div class="icono2">
+            <div class="icono">
                 <div>
-                    <img src="img/p 7.jpg" width="900px" height="300px" alt="50">
+                    <img src="img/p 7.jpg" width="900px" height="300px" alt="50"  style="padding: 12px; border-radius: 20px;>
                     <h3 class="animal">Turismo inolvidable</h3>
                     <p class="justificar" style="padding-right: 10px; padding-left: 10px;">Caminatas por senderos de
                         selva,
@@ -154,9 +154,9 @@ require_once "config/conexion.php"; ?>
                         class="boton boton-amarillo">Saber mas</a>
                 </div>
             </div>
-            <div class="icono3">
+            <div class="icono">
                 <div>
-                    <img src="img/p 5.jfif" width="900px" height="300px" alt="50">
+                    <img src="img/p 5.jfif" width="900px" height="300px" alt="50"  style="padding: 12px; border-radius: 20px;>
                     <h3 class="animal">Atactivos turisticos</h3>
                     <p class="justificar" style="padding-right: 10px; padding-left: 10px;">“La Jungla” es uno de los
                         parques

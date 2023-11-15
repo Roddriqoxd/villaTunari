@@ -209,33 +209,10 @@ a {
     text-align: center;
     padding: 5px;
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.969),rgba(69, 69, 69, 0.587)
-    ), url(../img/busque\ 1.jpg);
+        rgba(0, 0, 0, 0.699),rgba(69, 69, 69, 0.587)
+    );
     background-size: cover;
-}
-
-.icono2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 5px;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.969),rgba(69, 69, 69, 0.587)
-    ), url(../img/busque\ 4.jpg);
-    background-size: cover;
-}
-
-.icono3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 5px;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.969),rgba(69, 69, 69, 0.587)
-    ), url(../img/zariguella.webp);
-    background-size: cover;
+    border-radius: 20px;
 }
 @media (min-width: 768px){
     .icono {
