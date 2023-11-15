@@ -226,7 +226,7 @@ require_once "config/conexion.php"; ?>
                     <img style="width: 90%;" src="assets/img/<?php echo $data['img1']; ?>" alt="">
                 </div>
                 <div class="texto-entrada">
-                    <a href="entrada.php">
+                    <a href="blog.php#<?php echo $data['id']; ?>">
                         <h4 class="titulo-feria"
                             style="width: 318px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
                             <?php echo $data['nombre']; ?></h4>

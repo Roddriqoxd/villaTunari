@@ -82,7 +82,7 @@ require_once "config/conexion.php"; ?>
                     while ($data = mysqli_fetch_assoc($query)) { ?>
         <tr>
 
-            <section>
+            <section id="<?php echo $data['id']; ?>">
                 <article class="entrada-blog case">
                     <div class="imagen" style="width: 400px;height: 300px; overflow: hidden">
                         <img style="width: 90%;" src="assets/img/<?php echo $data['img1']; ?>" alt="">

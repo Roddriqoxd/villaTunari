@@ -85,6 +85,8 @@ require_once "config/conexion.php"; ?>
         </div>
     </header>
 
+    <h2 style="padding: 20px; text-shadow: 0px 0px 6px black;" class="centrar-texto fw-300 title-animal">Atractivos y actividades turisticas</h2><br>
+
     <div style="
 display: flex;
   justify-content: center;
@@ -110,7 +112,7 @@ display: flex;
             while ($data = mysqli_fetch_assoc($query)) { ?>
         <main class="seccion contenedor" id="<?php echo $data['id']; ?>">
             <h2 class="fw-300 centrar-texto"></h2>
-            <h2 class="fw-300 centrar-texto" style="font-family: 'animal'; padding: 10px;"><?php echo $data['nombre']; ?></h2>
+            <h2 class="fw-300 centrar-texto" style="font-family: 'animal'; padding: 10px; text-shadow: 0px 0px 6px black;"><?php echo $data['nombre']; ?></h2>
             <div class="contenedor-anuncios">
 
                 <div class="grid">

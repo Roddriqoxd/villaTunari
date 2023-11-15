@@ -32,7 +32,8 @@ body {
     font-size: 1.6rem;
     line-height: 2;
     /* background: #0e5522;   */
-    background-image: linear-gradient( rgb(29, 81, 0),rgba(109, 159, 86, 0.44) );
+    /* background-image: linear-gradient( rgb(29, 81, 0),rgba(109, 159, 86, 0.44) ); */
+    background-image: linear-gradient( rgba(221, 194, 63, 0.78),rgb(28, 87, 0) );
 }
 
 img {
