@@ -2,7 +2,7 @@
 
 //submit_rating.php
 
-$connect = new PDO("mysql:host=localhost;dbname=villatunari", "root", "");
+$connect = new PDO("mysql:host=localhost;dbname=villatunari", "root", "1234");
 
 if(isset($_POST["rating_data"]))
 {

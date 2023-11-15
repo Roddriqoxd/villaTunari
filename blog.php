@@ -24,8 +24,16 @@ require_once "config/conexion.php"; ?>
 </head>
 
 <body>
-
-    <header class="site-header pad">
+<a href="#inicio" style="background-color: yellow;
+  padding: 1px 10px 10px 10px;
+  position: fixed;
+  border-radius: 23%;
+  bottom: 0;
+  right: 0;
+  margin: 20px;">
+    <img src="img/flecha.png" style="width: 25px;" alt="">
+</a>
+    <header id="inicio" class="site-header pad">
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">

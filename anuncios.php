@@ -34,7 +34,17 @@ require_once "config/conexion.php"; ?>
 
 <body>
 
-    <header class="site-header" style="padding: 15px;">
+<a href="#inicio" style="background-color: yellow;
+  padding: 1px 10px 10px 10px;
+  position: fixed;
+  border-radius: 23%;
+  bottom: 0;
+  right: 0;
+  margin: 20px;">
+    <img src="img/flecha.png" style="width: 25px;" alt="">
+</a>
+
+    <header id="inicio" class="site-header" style="padding: 15px;">
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
@@ -75,17 +85,32 @@ require_once "config/conexion.php"; ?>
         </div>
     </header>
 
-    <!-- <div>
-        <p></p>
-    </div> -->
+    <div style="
+display: flex;
+  justify-content: center;
+  color: #fff33f;
+  gap: 20px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  pointer-events: auto;
+  text-decoration: none;">
+  <?php
+            $query1 = mysqli_query($conexion, "SELECT * FROM parques");
+            while ($data = mysqli_fetch_assoc($query1)) { ?>
+        <a class="buscador" href="#<?php echo $data['id'];?>"><p><?php echo $data['nombre'];?></p></a>
+        <?php
+                    }
+                    ?>
+    </div>
 
     <div>
         <?php
             $query = mysqli_query($conexion, "SELECT * FROM parques");
             while ($data = mysqli_fetch_assoc($query)) { ?>
-        <main class="seccion contenedor">
+        <main class="seccion contenedor" id="<?php echo $data['id']; ?>">
             <h2 class="fw-300 centrar-texto"></h2>
-            <h2 class="fw-300 centrar-texto" style="font-family: 'animal';"><?php echo $data['nombre']; ?></h2>
+            <h2 class="fw-300 centrar-texto" style="font-family: 'animal'; padding: 10px;"><?php echo $data['nombre']; ?></h2>
             <div class="contenedor-anuncios">
 
                 <div class="grid">
