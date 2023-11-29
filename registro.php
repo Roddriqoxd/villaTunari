@@ -72,7 +72,7 @@
             </section>
             <section class="info_items">
                 <div class="ver-todas">
-                    <a onclick="visible()" class="boton boton-verde">Registrarse</a>
+                    <a onclick="visible()" id="aj" class="boton boton-verde">Registrarse</a>
                 </div>
             </section>
         </section>
@@ -84,9 +84,9 @@
                 <span class="fa fa-user-circle"></span>
                 <br><br><br><br><br><br><br>
             </section>
-            <section class="info_items">
+            <section  class="info_items">
                 <div class="ver-todas">
-                    <a onclick="invisible()" class="boton boton-verde">Logearse</a>
+                    <a onclick="invisible()" style="font-size: 13px;" class="boton boton-verde">¿Ya tienes cuenta? Inicia sesión </a>
                 </div>
             </section>
         </section>
@@ -133,12 +133,15 @@
 
     </section>
 
+    document.
+
     <script>
     document.getElementById('login').style.display = 'none';
     document.getElementById('login1').style.display = 'none';
     document.getElementById('registro').style.height = '573px';
     document.getElementById('registro1').style.height = '573px';
 
+    document.getElementById('aj').click();
 
     function visible() {
         document.getElementById('login').style.display = 'flex';

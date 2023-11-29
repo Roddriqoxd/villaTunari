@@ -563,6 +563,15 @@ color: white;
   height: 100%;
 }
 
+.grid img:hover {
+    -webkit-transform:scale(1.40);
+    -moz-transform:scale(1.40);
+    -ms-transform:scale(1.40);
+    -o-transform:scale(1.40);
+    transform:scale(1.40);
+    transition: 1s;
+}
+
 .box {
     width: 40%;
     margin: 0 auto;
